@@ -10,10 +10,17 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("{0} + {1} = {2}", 5, 2, 5 + 2);
-            Console.WriteLine("{0} - {1} = {2}", 5, 2, 5 - 2);
-            Console.WriteLine("{0} * {1} = {2}", 5, 2, 5 * 2);
-            Console.WriteLine("{0} / {1} = {2} 余り　{3}", 5, 2, 5 / 2, 5 % 2);
+            int a;
+            int b = 3;
+            int add, sub;
+            double avg;
+            a = 6;
+            add = a + b;
+            sub = a - b;
+            avg = (a + b) / 2.0;
+            Console.WriteLine("{0} + {1} = {2}", a, b, add);
+            Console.WriteLine("{0} - {1} = {2}", a, b, sub);
+            Console.WriteLine("{0}と{1}の平均値{2}", a, b, avg);
         }
     }
 }
