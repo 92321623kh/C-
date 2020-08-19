@@ -10,7 +10,10 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("HeloWorld,");
+            Console.WriteLine("{0} + {1} = {2}", 5, 2, 5 + 2);
+            Console.WriteLine("{0} - {1} = {2}", 5, 2, 5 - 2);
+            Console.WriteLine("{0} * {1} = {2}", 5, 2, 5 * 2);
+            Console.WriteLine("{0} / {1} = {2} 余り　{3}", 5, 2, 5 / 2, 5 % 2);
         }
     }
 }
