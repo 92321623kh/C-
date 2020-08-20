@@ -10,15 +10,17 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            Console.Write("★の数を入力:");
+            Console.Write("正の数を入力:");
             int n = int.Parse(Console.ReadLine());
-            int i = 0;
-            while (i < n)
+            for (int i = 1; i <= n; i++)
             {
-                Console.Write("★");
-                i++;
+                if (n % i == 0)
+                {
+                    Console.Write("{0}",i);
+                }
             }
-            Console.WriteLine();
+            Console.WriteLine(); 
+
         }
     }
 } 
