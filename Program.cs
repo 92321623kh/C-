@@ -10,15 +10,18 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            for (int i = 1;i <= 2; i++)
+            Random rnd = new Random();
+            Console.WriteLine("6が出たら終了");
+            while (true)
             {
-                for (int j = 1; j <= 3; j++)
+                int dice = rnd.Next(1, 7);
+                Console.WriteLine(dice);
+                if (dice == 6)
                 {
-                    int k = i + j;
-                    Console.Write(i + "+" + j + "=" + k + "");
+                    break;
                 }
             }
-            Console.WriteLine();
+            Console.WriteLine("end");
         }
     }
 } 
