@@ -12,9 +12,11 @@ namespace Sample102
         {
             Console.Write("★の数を入力:");
             int n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            int i = 0;
+            while (i < n)
             {
                 Console.Write("★");
+                i++;
             }
             Console.WriteLine();
         }
