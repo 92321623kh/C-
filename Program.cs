@@ -10,22 +10,20 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            double[] d = new double[3];
-            d[0] = 1.2;
-            d[1] = 3.7;
-            d[2] = 4.1;
-            double sum, avg;
-            sum = 0.0;
-            for (int i = 0; i < d.Length; i++)
+            int[] n = { 5, 4, 3, 2, 1};
+            string[] s = { "ABC", "DEF", "GHI" };
+            int i;
+            for (i = 0; i < n.Length; i++)
             {
-                Console.Write(d[i] + " ");
-                sum += d[i];
+                Console.Write(n[i] + " ");
             }
             Console.WriteLine();
-            avg = sum / d.Length;
-            Console.WriteLine("合計値:" + sum);
-            Console.WriteLine("平均値:" + avg);
-            //            int n = int.Parse(Console.ReadLine());       
+            for (i = 0; i < s.Length; i++)
+            {
+                Console.Write(s[i] + " ");
+            }
+            Console.WriteLine();
+
         }
     }
 } 
