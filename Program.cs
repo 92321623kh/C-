@@ -10,18 +10,13 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            Console.WriteLine("6が出たら終了");
-            while (true)
+            Console.Write("★の数を入力:");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
             {
-                int dice = rnd.Next(1, 7);
-                Console.WriteLine(dice);
-                if (dice == 6)
-                {
-                    break;
-                }
+                Console.Write("★");
             }
-            Console.WriteLine("end");
+            Console.WriteLine();
         }
     }
 } 
