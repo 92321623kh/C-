@@ -10,31 +10,16 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("数当てゲーム");
-            //Console.WriteLine("0から10の数値を入力してください:");
-            Random rnd = new Random();
-            int max = 0;
-            int min = 101;
-//            int n = rnd.Next(11);
-  //          int i = 1;
-//            int n = int.Parse(Console.ReadLine());
-            for (int i = 1;i <= 10; i++)
+            Console.WriteLine("九九の表示");
+            //            int n = int.Parse(Console.ReadLine());
+            for (int m = 1; m <= 9; m++)
             {
-                int n = rnd.Next(1,101);
-                Console.Write("{0} " +
-                    "" +
-                    "", n);
-                if (n > max)
+                for (int n = 1; n <= 9; n++)
                 {
-                    max = n;
+                    Console.Write("{0}X{1}={2,2:d}", m, n, m * n);
                 }
-                if (n < min)
-                {
-                    min = n;
-                }
-            }
-            Console.WriteLine("最大値:{0}",max);
-            Console.WriteLine("最小値:{0}", min);
+                Console.WriteLine();
+            }       
         }
     }
 } 
