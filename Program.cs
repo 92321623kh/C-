@@ -10,16 +10,37 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            Console.Write("正の数を入力:");
-            int n = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= n; i++)
+            Console.WriteLine("数当てゲーム");
+            Console.WriteLine("0から10の数値を入力してください:");
+            Random rnd = new Random();
+            int n = rnd.Next(11);
+            int i = 1;
+//            int n = int.Parse(Console.ReadLine());
+            while (i <= 3)
             {
-                if (n % i == 0)
+                Console.Write("{0}回目", i);
+                int ans = int.Parse(Console.ReadLine());
+                if (ans < n)
                 {
-                    Console.Write("{0}",i);
+                    Console.WriteLine("小さすぎます");
                 }
+                else if (ans > n)
+                {
+                    Console.WriteLine("大きすぎます");
+                }
+                else
+                {
+                    Console.WriteLine("正解です");
+                    break;
+                }
+                i++;
             }
-            Console.WriteLine(); 
+            if(i == 4)
+            {
+                Console.WriteLine("ゲームオーバー");
+                Console.WriteLine("正解は{0}です",n);
+            }
+            
 
         }
     }
