@@ -10,12 +10,11 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            string str1, str2;
-            Console.Write("str1=");
-            str1 =Console.ReadLine();
-            Console.Write("str2=");
-            str2 = Console.ReadLine();
-            Console.WriteLine("str1 + str2 = {0}",str1 + str2);
+            for (int i = 1;i <= 5; i++)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
         }
     }
 } 
