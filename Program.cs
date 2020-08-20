@@ -10,20 +10,47 @@ namespace Sample102
     {
         static void Main(string[] args)
         {
-            int[][] a = new int[][] {
-                        new int[] { 0, 1 },
-                        new int[] { 2 },
-                        new int[] { 3, 4, 5, 6}
-                        };
-            
-            for (int m = 0; m < a.Length; m++)
+            const int SIZE = 5;
+            int[,] data = new int[SIZE, SIZE];
+
+            for (int i = 0; i < data.GetLength(0); i++)
             {
-                for (int n = 0; n < a[m].Length; n++)
+                for (int j = 0; j < data.GetLength(1); j++)
                 {
-                    Console.Write(a[m][n] + "");
+                    data[i, j] = 0;
                 }
-                Console.WriteLine();
+                Random rnd = new Random();
+                int num = 1;
+                while (num <= SIZE * SIZE)
+                {
+                    while (true)
+                    {
+                        int m = rnd.Next(SIZE);
+                        int n = rnd.Next(SIZE);
+
+                        if (data[m, n] == 0)
+                        {
+                            data[m, n] = num;
+                            num++;
+                            break;
+                        }
+                    }
+                }
+                for (int i = 0; i < data.GetLength(0); i++)
+                {
+                    for (int j = 0; j < data.GetLength(1); j++)
+                    {
+                        Console.Write("{0,2:d}|", data[i, j]);
+                    }
+                    Console.WriteLine();
+                    for (int j = 0; j < data.GetLength(1); j++)
+                    {
+                        Console.Write("---");
+                    }
+                    Console.WriteLine();
+                }
             }
         }
     }
-} 
+}
+
