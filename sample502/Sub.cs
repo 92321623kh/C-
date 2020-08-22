@@ -6,19 +6,12 @@ using System.Threading.Tasks;
 
 namespace sample502
 {
-    class Sub : Super
+    class Sub : Program
     {
-        public Sub()
+        public override void Foo()
         {
-            Console.WriteLine("Subのコンストラクタ(引数なし)");
+            Console.WriteLine("子クラスのFoo()メソッド");
         }
-        public Sub(int param) : base(param)
-        {
-            Console.WriteLine("Subのコンストラクタ(引数:param={0})", param);
-        }
-        ~Sub()
-        {
-            Console.WriteLine("Subクラスのデスストラクタ");
-        }
+     
     }
 }

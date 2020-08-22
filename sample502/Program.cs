@@ -8,13 +8,9 @@ namespace sample502
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Sub s1 = new Sub();
-            s1.showParam();
-            Sub s2 = new Sub(100);
-            s2.showParam();
-
-        }
+       public virtual void Foo()
+       {
+            Console.WriteLine("親クラスのFoo()メソッド");
+       }
     }
 }

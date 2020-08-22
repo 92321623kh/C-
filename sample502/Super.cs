@@ -8,24 +8,13 @@ namespace sample502
 {
     class Super
     {
-        private int param = 0;
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            Sub c = new Sub();
+            p.Foo();
+            c.Foo();
 
-        public Super()
-        {
-            Console.WriteLine("Superクラスのコンストラクタ(引数なし)");
-        }
-        public Super(int param)
-        {
-            Console.WriteLine("Superクラスのコンストラクタ(引数:param={0})", param);
-            this.param = param;
-        }
-        ~Super()
-        {
-            Console.WriteLine("Superクラスのデスストラクタ");
-        }
-        public void showParam()
-        {
-            Console.WriteLine("param = {0}", param);
         }
     }
 }
